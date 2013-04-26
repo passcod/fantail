@@ -3,7 +3,7 @@
   "description": "Simple schedule-managed queue",
   "version": "0.1.2",
   "author": "Félix Saparelli <me@passcod.name>",
-  "main": "./fantail",
+  "main": "./index",
   "repository": {
     "type": "git",
     "url": "https://github.com/passcod/fantail.git"
@@ -22,7 +22,7 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
-    "lint": "./node_modules/.bin/jshint --config=./jshint.json fantail.js test",
-    "doc": "./node_modules/.bin/docco -o doc fantail.js"
+    "lint": "./node_modules/.bin/jshint --config=./jshint.json index.js test",
+    "doc": "./node_modules/.bin/docco -o doc index.js"
   }
 }

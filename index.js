@@ -99,7 +99,8 @@ module.exports = function(config) {
   var throttledHandlerRun = _.throttle(handlerRun, config.throttle);
 
   // ### .addPicker(iterator: function, interval: int, limit: int optional)
-  // [Public][1]
+  // [Public
+  // ](//github.com/passcod/fantail#addpickeriter-function-time-int-limit-int)
   //
   // Add a picker to the list. If we're started, run it immediately,
   // otherwise that'll be done later. Return the index it's inserted at.
@@ -162,5 +163,3 @@ module.exports = function(config) {
     start();
   }
 };
-
-// [1]: //github.com/passcod/fantail#addpickeriter-function-time-int-limit-int
