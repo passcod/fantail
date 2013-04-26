@@ -18,9 +18,9 @@ Options are set at instantiation and can't be modified afterwards.
 
 ```javascript
 var sch = new Fantail({
-  debug: false,     # Expose queues and handlers.
-  throttle: 200,    # Run handlers (at most once) every 200 milliseconds
-  immediate: false  # .start() immediately.
+  debug: false,     // Expose queues and handlers.
+  throttle: 200,    // Run handlers (at most once) every 200 milliseconds
+  immediate: false  // .start() immediately.
 });
 ```
 
@@ -63,7 +63,7 @@ the `this` object:
 - `this.handle(name: string)` schedules the handler `name` to be
   executed with the item as parameter. As soon as `this.handle()`
   is called, the item is removed from the queue. Subsequent calls
-  to `this.handle()` **within the same function** will schedule
+  to `this.handle()` *within the same function* will schedule
   additional handlers for the same item.
 
 ```javascript
@@ -105,7 +105,9 @@ Community
 =========
 
 - All authors and contributors are listed in the `package.json`.
-- Pull requests need to adhere to the [style guide](/passcod/node-style-guide).
+- Pull requests need to adhere to the [style guide].
 - API is tested. Run `npm test` to ensure it works.
 - Code is linted. Run `npm run-script lint` to ensure you're good.
 - No license. This is released in the public domain.
+
+[style guide]: //github.com/passcod/node-style-guide
