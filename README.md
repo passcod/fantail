@@ -51,12 +51,12 @@ sch.addHandler('something', function(item) {
 ```
 
 
-## .addPicker(iterator: function, interval: integer, limit: integer optional)
+## .addPicker(iter: function, time: int, limit: int)
 
-Pickers filter the queue. They are run every `interval` milliseconds, and can
-be limited to `limit` items per run; the default is to go through everything.
-They are passed the item and nothing else, and have access to two methods on
-the `this` object:
+Pickers filter the queue. They are run every `time` milliseconds, and can
+be limited to `limit` items per run (`limit` is optional); the default is to go
+through everything. They are passed the item and nothing else, and have access
+to two methods on the `this` object:
 
 - `this.stop()` stops the current picker run after the present iteration.
 
