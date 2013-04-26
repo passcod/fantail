@@ -3,6 +3,7 @@
 //
 // - Github: https://github.com/passcod/fantail
 // - npm: https://npmjs.org/package/fantail
+// - Travis-CI: https://travis-ci.org/passcod/fantail
 // - This document: https://passcod.name/fantail
 
 'use strict';

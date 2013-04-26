@@ -1,8 +1,9 @@
 ♫ ♭♩ Fantail
 ============
 
+[![Build Status](https://travis-ci.org/passcod/fantail.png)](//travis-ci.org/passcod/fantail)
 [![NPM version](https://badge.fury.io/js/fantail.png)](//npmjs.org/package/fantail)
-[![Dependency Status](https://gemnasium.com/passcod/fantail.png)](https://gemnasium.com/passcod/fantail)
+[![Dependency Status](https://gemnasium.com/passcod/fantail.png)](//gemnasium.com/passcod/fantail)
 
 ```javascript
 var Fantail = require('fantail');
