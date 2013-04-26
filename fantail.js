@@ -22,39 +22,43 @@ module.exports = function(config) {
   };
 
   var runPicker = function(picker) {
-    todo.some(function(item, index) {
-      var breaking = index === picker.limit;
-      var used = false;
-      picker.func.call({
-        stop: function() {
-          breaking = true;
-        },
-        handle: function(name) {
-          used = true;
-          doing.push({
-            subject: item,
-            handler: handlers[name]
-          });
+    if (picker.limit !== 0) {
+      var i = 0;
+      todo.some(function(item, index) {
+        var breaking = i === picker.limit;
+        var used = false;
+        picker.func.call({
+          stop: function() {
+            breaking = true;
+          },
+          handle: function(name) {
+            used = true;
+            doing.push({
+              subject: item,
+              handler: handlers[name]
+            });
+          }
+        }, item);
+
+        if (used) {
+          delete todo[index];
         }
-      }, item);
 
-      if (used) {
-        delete todo[index];
-      }
+        i += 1;
+        return breaking;
+      });
+    }
 
-      return breaking;
-    });
     setTimeout(function() {
       runPicker(picker);
     }, picker.interval);
     throttledHandlerRun();
   };
 
-  var handlerRun = function(limit) {
-    doing.some(function(item, index) {
+  var handlerRun = function() {
+    doing.forEach(function(item, index) {
       delete doing[index];
       item.handler(item.subject);
-      return index === limit;
     });
   };
 
