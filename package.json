@@ -1,0 +1,27 @@
+{
+  "name": "fantail",
+  "description": "Simple schedule-managed queue",
+  "version": "0.1.0",
+  "author": "Félix Saparelli <me@passcod.name>",
+  "main": "./fantail",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/passcod/fantail.git"
+  },
+  "keywords": [
+    "queue",
+    "scheduler"
+  ],
+  "dependencies" : {
+    "underscore": "1.4.x"
+  },
+  "devDependencies": {
+    "jshint": "1.x.x",
+    "mocha": "1.9.x",
+    "docco": "0.6.x"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "lint": "./node_modules/.bin/jshint --config=./jshint.json fantail.js"
+  }
+}
