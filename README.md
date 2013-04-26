@@ -1,7 +1,7 @@
 ♫ ♭♩ Fantail
 ============
 
-[![NPM version](https://badge.fury.io/js/fantail.png)](http://npmjs.org/package/fantail)
+[![NPM version](https://badge.fury.io/js/fantail.png)](//npmjs.org/package/fantail)
 [![Dependency Status](https://gemnasium.com/passcod/fantail.png)](https://gemnasium.com/passcod/fantail)
 
 ```javascript

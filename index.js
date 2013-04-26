@@ -2,7 +2,7 @@
 // Chirp chirp. Simple schedule-managed queue.
 //
 // - Github: https://github.com/passcod/fantail
-// - npm: http://npmjs.org/package/fantail
+// - npm: https://npmjs.org/package/fantail
 // - This document: https://passcod.name/fantail
 
 'use strict';
