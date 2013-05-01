@@ -21,7 +21,6 @@ module.exports = function(config) {
     immediate: false
   });
 
-  var started   = false;
   var todo      = [];
   var doing     = [];
   var handlers  = {};
@@ -112,7 +111,7 @@ module.exports = function(config) {
       limit: limit
     });
 
-    if (started) {
+    if (this.started) {
       runPicker(pickers[i]);
     }
 
@@ -136,7 +135,7 @@ module.exports = function(config) {
   // - Do an initial handler run
   // - Schedule subsquent handler runs
   var start = function() {
-    started = true;
+    this.started = true;
     pickers.forEach(runPicker);
     setInterval(throttledHandlerRun, config.throttle);
     throttledHandlerRun();
@@ -150,6 +149,7 @@ module.exports = function(config) {
   this.addPicker  = addPicker;
   this.addHandler = addHandler;
   this.start      = start;
+  this.started    = false;
   this.pickers    = pickers;
 
   // Expose a few internals. Used mainly for testing.

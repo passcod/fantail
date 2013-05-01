@@ -34,6 +34,10 @@ describe('An instance of Fantail', function() {
     assert.equal(typeof t.start, 'function');
   });
 
+  it('should have .started', function() {
+    assert.equal(typeof t.started, 'boolean');
+  });
+
   it('should have .pickers', function() {
     assert.equal(typeof t.pickers, 'object');
   });
@@ -93,6 +97,7 @@ describe('Typical operation', function() {
 
   it('start it up', function(done) {
     t.start();
+    assert.equal(t.started, true);
     setTimeout(function() {
       assert.equal(log.length, 5);
       done();
