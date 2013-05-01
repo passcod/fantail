@@ -98,6 +98,10 @@ firing things off but still want to be able to push things onto the queue.
 Access the array of pickers. This is useful to modify a picker, see above.
 
 
+## .started
+
+You may want to know whether you've called start() yet. Or not.
+
 ## Debug mode
 
 Using `debug: true` in the instantiation config exposes both internal queues
