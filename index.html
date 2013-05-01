@@ -105,7 +105,6 @@ module.exports = <span class="keyword">function</span>(config) {</pre></div></di
             <div class="content"><div class='highlight'><pre>    immediate: <span class="literal">false</span>
   });
 
-  <span class="keyword">var</span> started   = <span class="literal">false</span>;
   <span class="keyword">var</span> todo      = [];
   <span class="keyword">var</span> doing     = [];
   <span class="keyword">var</span> handlers  = {};
@@ -289,7 +288,7 @@ otherwise that&#39;ll be done later. Return the index it&#39;s inserted at.</p>
       limit: limit
     });
 
-    <span class="keyword">if</span> (started) {
+    <span class="keyword">if</span> (<span class="keyword">this</span>.started) {
       runPicker(pickers[i]);
     }
 
@@ -335,7 +334,7 @@ otherwise that&#39;ll be done later. Return the index it&#39;s inserted at.</p>
             </div>
             
             <div class="content"><div class='highlight'><pre>  <span class="keyword">var</span> start = <span class="keyword">function</span>() {
-    started = <span class="literal">true</span>;
+    <span class="keyword">this</span>.started = <span class="literal">true</span>;
     pickers.forEach(runPicker);
     setInterval(throttledHandlerRun, config.throttle);
     throttledHandlerRun();
@@ -360,6 +359,7 @@ respectively: &quot;is exposed by default&quot; and &quot;isn&#39;t&quot;.</p>
   <span class="keyword">this</span>.addPicker  = addPicker;
   <span class="keyword">this</span>.addHandler = addHandler;
   <span class="keyword">this</span>.start      = start;
+  <span class="keyword">this</span>.started    = <span class="literal">false</span>;
   <span class="keyword">this</span>.pickers    = pickers;</pre></div></div>
             
         </li>
