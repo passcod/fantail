@@ -1,7 +1,7 @@
 {
   "name": "fantail",
   "description": "Simple schedule-managed queue",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Félix Saparelli <me@passcod.name>",
   "main": "./index",
   "repository": {
@@ -13,12 +13,12 @@
     "scheduler"
   ],
   "dependencies" : {
-    "underscore": "1.4.x"
+    "underscore": "^1.6.0"
   },
   "devDependencies": {
-    "jshint": "1.x.x",
-    "mocha": "1.9.x",
-    "docco": "0.6.x"
+    "jshint": "^2.5.2",
+    "mocha": "^1.20.1",
+    "docco": "^0.6.3"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
