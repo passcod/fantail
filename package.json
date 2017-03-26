@@ -17,8 +17,8 @@
   },
   "devDependencies": {
     "jshint": "^2.5.2",
-    "mocha": "^1.20.1",
-    "docco": "^0.6.3"
+    "mocha": "^3.2.0",
+    "docco": "^0.7.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
