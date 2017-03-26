@@ -17,12 +17,17 @@
   },
   "devDependencies": {
     "jshint": "^2.5.2",
-    "mocha": "^3.2.0",
+    "mocha": "^1.20.1",
     "docco": "^0.7.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
     "lint": "./node_modules/.bin/jshint --config=./jshint.json index.js test",
     "doc": "./node_modules/.bin/docco -o doc index.js"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "mocha"
+    ]
   }
 }
